@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "test",
+    "database": "uwav",
+    "host": "172.19.0.2",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "test",
+    "database": "uwav",
+    "host": "172.19.0.2",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "test",
+    "database": "uwav",
+    "host": "172.19.0.2",
+    "dialect": "mysql"
+  }
+}
