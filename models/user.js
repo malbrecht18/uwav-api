@@ -3,7 +3,7 @@
 const uuidv4 = require('uuid/v4');
 
 module.exports = (sequelize, DataTypes) => {
-  const Session = sequelize.define('Session', {
+  const User = sequelize.define('User', {
     id: {
       allowNull: false,
       autoIncrement: false,
@@ -11,11 +11,12 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.UUID,
       defaultValue: uuidv4()
     },
-    session_id: DataTypes.STRING,
-    playlist_id: DataTypes.STRING
+    spotify_id: DataTypes.STRING,
+    name: DataTypes.STRING,
+    email: DataTypes.STRING
   }, {});
-  Session.associate = function(models) {
+  User.associate = function(models) {
     // associations can be defined here
   };
-  return Session;
+  return User;
 };

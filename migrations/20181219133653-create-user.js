@@ -4,7 +4,7 @@ const uuidv4 = require('uuid/v4');
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Sessions', {
+    return queryInterface.createTable('Users', {
       id: {
         allowNull: false,
         autoIncrement: false,
@@ -12,10 +12,13 @@ module.exports = {
         type: Sequelize.UUID,
         defaultValue: uuidv4()
       },
-      session_id: {
+      spotify_id: {
         type: Sequelize.STRING
       },
-      playlist_id: {
+      name: {
+        type: Sequelize.STRING
+      },
+      email: {
         type: Sequelize.STRING
       },
       createdAt: {
@@ -29,6 +32,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Sessions');
+    return queryInterface.dropTable('Users');
   }
 };
